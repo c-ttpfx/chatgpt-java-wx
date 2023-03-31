@@ -1,0 +1,45 @@
+<!--pages/contact/contact.wxml-->
+
+<view id="chatPage">
+
+  <scroll-view scroll-y scroll-x scroll-into-view='{{toView}}' style='height: {{scrollHeight}};'>
+    <!-- <view class='scrollMsg'> -->
+    <block wx:key wx:for='{{msgList}}' wx:for-index="index">
+
+      <!-- 单个消息1 客服发出（左） -->
+      <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='http://www.ttpfx.top/images/机器人.png'></image>
+        </view>
+        <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='http://www.ttpfx.top/images/向左.png' mode='widthFix'></image>
+        </view>
+        <block>
+          <text user-select='{{true}}' class='leftMsg' space="nbsp" decode="{{true}}">{{item.content}}</text>
+        </block>
+        
+      </view>
+
+      <!-- 单个消息2 用户发出（右） -->
+      <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
+        <view class='rightMsg'>{{item.content}}</view>
+        <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
+          <image style='width: 4vw;' src='http://www.ttpfx.top/images/向右.png' mode='widthFix'></image>
+        </view>
+        <view style='width: 11vw; height: 11vw;'>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{cusHeadIcon}}'></image>
+        </view>
+      </view>
+
+    </block>
+    <!-- </view> -->
+
+    <!-- 占位 -->
+    <view style='width: 100%; height: 18vw;'></view>
+  </scroll-view>
+
+  <view class='inputRoom' style='bottom: {{inputBottom}}'>
+    <image style='width: 7vw; margin-left: 3.2vw;' src='http://www.ttpfx.top/images/文件夹.png' mode='widthFix'></image>
+    <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
+  </view>
+</view>

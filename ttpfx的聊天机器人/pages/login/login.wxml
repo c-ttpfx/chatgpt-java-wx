@@ -1,0 +1,22 @@
+<view class="v1" style="height:{{clientHeight?clientHeight+'px':'auto'}}">
+ <!-- v2父容器  子view使用绝对布局 -->
+   <view class="v2">
+     <view class="dltext" style="width: 232rpx; height: 92rpx; display: block; box-sizing: border-box; left: 0rpx; top: -2rpx">登录</view>
+  
+     <!-- 账号 -->
+     <view class="phoneCs">
+       <!-- <image src="/images/zhang.png" class="ph"></image> -->
+       <input placeholder="请输入账号" type="text" bindinput="content" />
+     </view>
+     <!-- 密码 -->
+     <view class=passwordCs">
+       <!-- <image src="/images/mi.png" class="ps"></image> -->
+       <input placeholder="请输入密码" type="password" bindinput="password" />
+     </view>
+     <!-- 登录按钮 -->
+     <view class="denglu">
+       <button class="btn-dl" type="primary" bindtap="goadmin">登录</button>
+     </view>
+   </view>
+ </view>
+  

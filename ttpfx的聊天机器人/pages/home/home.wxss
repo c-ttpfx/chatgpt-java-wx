@@ -1,0 +1,18 @@
+/* pages/home/home.wxss */
+.home_img_container {
+  height: 400rpx;
+  width: 600rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+
+.home_img {
+  width: 600rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  display: inline-blocks;
+}
+
+.logout_btn{
+
+}

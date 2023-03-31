@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  datasource:
+    username: root
+    password: 自己的数据库密码
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://数据库地址:3306/mychatgpt?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

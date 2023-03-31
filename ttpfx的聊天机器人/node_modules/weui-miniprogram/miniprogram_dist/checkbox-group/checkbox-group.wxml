@@ -1,0 +1,1 @@
+<checkbox-group wx:if="{{multi}}" class="{{extClass}}" bindchange="checkedChange"><slot/></checkbox-group><radio-group wx:else class="{{extClass}}" bindchange="checkedChange"><slot/></radio-group>

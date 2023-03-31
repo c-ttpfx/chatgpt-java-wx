@@ -1,0 +1,11 @@
+
+<view class="home_img_container">
+  <image src="http://www.ttpfx.top/images/壁纸4.png" class="home_img"></image>
+</view>
+
+<view class="container">
+  <button bindtap="logout" class="logout_btn" type="primary">退出登录</button>
+  <mp-dialog title="退出登录" show="{{isShow}}" bindbuttontap="confirmLogout" buttons="{{buttons}}">
+    <view>确认退出吗？</view>
+  </mp-dialog>
+</view>

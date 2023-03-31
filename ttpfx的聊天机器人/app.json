@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ttpfx的聊天助手",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#33a3dc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/images/首页-置灰.png",
+        "selectedIconPath": "/images/首页-置灰 (1).png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊天",
+        "iconPath": "/images/消息-置灰.png",
+        "selectedIconPath": "/images/消息-置灰 (1).png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "/images/我的.png",
+        "selectedIconPath": "/images/我的 (1).png"
+      }
+    ]
+  }
+}

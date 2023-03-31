@@ -1,0 +1,2 @@
+.weui-gallery__opr{padding-bottom:0}.weui-gallery__del{padding-bottom:calc(16px + env(safe-area-inset-bottom))}.weui-gallery:focus{outline:none}
+

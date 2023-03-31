@@ -1,0 +1,16 @@
+.index_img_container {
+  /* border: 2px solid red; */
+  margin-top: 30rpx;
+  background-color: rgb(236, 235, 235)
+}
+
+.index_img {
+  width: 90%;
+  padding-left: 37.5rpx;
+  margin-top: 20rpx;
+}
+.centent{
+  display: block;
+  margin: 20px;
+  font-size: 22px;
+}
