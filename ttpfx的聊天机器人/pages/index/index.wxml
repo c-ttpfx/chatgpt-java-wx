@@ -1,14 +1,14 @@
 <!--index.wxml-->
 <view class="index_img_container">
-  <image src="http://www.ttpfx.top/images/好看的壁纸.jpg" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸1.png" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸2.png" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸3.jpg" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸4.png" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸5.jpg" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸6.jpg" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸7.jpg" class="index_img"></image>
-  <image src="http://www.ttpfx.top/images/壁纸8.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/好看的壁纸.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸1.png" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸2.png" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸3.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸4.png" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸5.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸6.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸7.jpg" class="index_img"></image>
+  <image src="http://自己服务器ip/images/壁纸8.jpg" class="index_img"></image>
 </view>
 <view class="centent">
   那位大佬帮我写一下微信小程序的界面，个人审美太差了！！！

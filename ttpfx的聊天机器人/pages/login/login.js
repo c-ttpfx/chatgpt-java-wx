@@ -48,7 +48,7 @@ Page({
       })
     } else {
       wx.request({
-        url: 'http://www.ttpfx.top/user/login',
+        url: 'http://自己服务器ip/user/login',
         method: "get",
         data: {
           "username": username,

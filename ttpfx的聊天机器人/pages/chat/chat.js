@@ -70,7 +70,7 @@ Page({
       let username = wx.getStorageSync('username')
       wx.removeStorageSync('username')
       wx.request({
-        url: 'http://www.ttpfx.top/user/logout',
+        url: 'http://自己服务器ip/user/logout',
         method: "get",
         data: {
           "username": username,
@@ -88,7 +88,7 @@ Page({
 
     }
     wx.request({
-      url: 'http://www.ttpfx.top/user/checkUserKey',
+      url: 'http://自己服务器ip/user/checkUserKey',
       method: "get",
       data: {
         "username": wx.getStorageSync('username'),
@@ -118,7 +118,7 @@ Page({
     }
 
     wx.connectSocket({
-      url: 'ws://www.ttpfx.top/chatWebSocket/' + wx.getStorageSync('username')
+      url: 'ws://自己服务器ip/chatWebSocket/' + wx.getStorageSync('username')
     })
     // console.log( new Date());
     // console.log(wx.getStorageSync('username'));

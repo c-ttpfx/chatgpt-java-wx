@@ -9,10 +9,10 @@
       <!-- 单个消息1 客服发出（左） -->
       <view wx:if='{{item.speaker=="server"}}' id='msg-{{index}}' style='display: flex; padding: 2vw 11vw 2vw 2vw;'>
         <view style='width: 11vw; height: 11vw;'>
-          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='http://www.ttpfx.top/images/机器人.png'></image>
+          <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='http://自己服务器ip/images/机器人.png'></image>
         </view>
         <view style='width: 4vw; height: 11vw; margin-left: 0.5vw; display: flex; align-items: center; z-index: 9;'>
-          <image style='width: 4vw;' src='http://www.ttpfx.top/images/向左.png' mode='widthFix'></image>
+          <image style='width: 4vw;' src='http://自己服务器ip/images/向左.png' mode='widthFix'></image>
         </view>
         <block>
           <text user-select='{{true}}' class='leftMsg' space="nbsp" decode="{{true}}">{{item.content}}</text>
@@ -24,7 +24,7 @@
       <view wx:else id='msg-{{index}}' style='display: flex; justify-content: flex-end; padding: 2vw 2vw 2vw 11vw;'>
         <view class='rightMsg'>{{item.content}}</view>
         <view style='width: 4vw; height: 11vw; margin-right: 0.5vw; display: flex; align-items: center; z-index: 9;'>
-          <image style='width: 4vw;' src='http://www.ttpfx.top/images/向右.png' mode='widthFix'></image>
+          <image style='width: 4vw;' src='http://自己服务器ip/images/向右.png' mode='widthFix'></image>
         </view>
         <view style='width: 11vw; height: 11vw;'>
           <image style='width: 11vw; height: 11vw; border-radius: 10rpx;' src='{{cusHeadIcon}}'></image>
@@ -39,7 +39,7 @@
   </scroll-view>
 
   <view class='inputRoom' style='bottom: {{inputBottom}}'>
-    <image style='width: 7vw; margin-left: 3.2vw;' src='http://www.ttpfx.top/images/文件夹.png' mode='widthFix'></image>
+    <image style='width: 7vw; margin-left: 3.2vw;' src='http://自己服务器ip/images/文件夹.png' mode='widthFix'></image>
     <input bindconfirm='sendClick' adjust-position='{{false}}' value='{{inputVal}}' confirm-type='send' bindfocus='focus' bindblur='blur'></input>
   </view>
 </view>

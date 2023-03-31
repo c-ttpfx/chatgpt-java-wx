@@ -1,6 +1,6 @@
 
 <view class="home_img_container">
-  <image src="http://www.ttpfx.top/images/壁纸4.png" class="home_img"></image>
+  <image src="http://自己服务器ip/images/壁纸4.png" class="home_img"></image>
 </view>
 
 <view class="container">
