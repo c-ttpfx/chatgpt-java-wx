@@ -21,6 +21,7 @@ public class Test {
         System.out.println("\n\n\n\n");
 
         while (true) {
+            Thread.sleep(1000);
             System.out.print("请输入问题(q退出)：");
             String question = new Scanner(System.in).nextLine();
             if ("q".equals(question.trim())) break;
