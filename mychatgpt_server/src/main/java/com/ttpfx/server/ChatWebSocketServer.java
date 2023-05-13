@@ -6,6 +6,7 @@ import com.ttpfx.model.ChatModel;
 import com.ttpfx.service.UserLogService;
 import com.ttpfx.service.UserService;
 import com.ttpfx.vo.chat.ChatRequestParameter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -15,6 +16,7 @@ import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Consumer;
 
 /**
  * @author ttpfx
@@ -22,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 @Component
 @ServerEndpoint("/chatWebSocket/{username}")
+@Slf4j
 public class ChatWebSocketServer {
 
     /**
@@ -38,7 +41,7 @@ public class ChatWebSocketServer {
      */
     private Session session;
     /**
-     * 接收username
+     * 接收的username
      */
     private String username = "";
 
@@ -91,13 +94,13 @@ public class ChatWebSocketServer {
         this.userLog.setUsername(username);
         chatWebSocketMap.put(username, this);
         onlineCount++;
-        System.out.println(username + "--open");
+        log.info("{}--open",username);
     }
 
     @OnClose
     public void onClose() {
         chatWebSocketMap.remove(username);
-        System.out.println(username + "--close");
+        log.info("{}--close",username);
     }
 
     @OnMessage
@@ -109,8 +112,16 @@ public class ChatWebSocketServer {
         this.userLog.setLogId(null);
         this.userLog.setQuestion(message);
         long start = System.currentTimeMillis();
+        // 将问题的答案进行返回
+        Consumer<String> resConsumer = res -> {
+            try {
+                session.getBasicRemote().sendText(res);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        };
         // 这里就会返回结果
-        String answer = chatModel.getAnswer(session, chatRequestParameter, message);
+        String answer = chatModel.getAnswer(resConsumer ,chatRequestParameter, message);
         long end = System.currentTimeMillis();
         this.userLog.setConsumeTime(end - start);
         this.userLog.setAnswer(answer);

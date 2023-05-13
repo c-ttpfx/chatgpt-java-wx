@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ttpfx.mapper.UserLogMapper">
+
+    <insert id="insert">
+        insert into user_log(user_id, username, pre_log_id, question, answer, date_time, consume_time)
+            value (#{userId}, #{username}, #{preLogId}, #{question}, #{answer}, #{dateTime}, #{consumeTime})
+    </insert>
+</mapper>

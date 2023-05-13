@@ -14,7 +14,7 @@ Page({
       let username = wx.getStorageSync('username')
       wx.removeStorageSync('username')
       wx.request({
-        url: 'http://自己服务器ip/user/logout',
+        url: 'http://127.0.0.1:80/user/logout',
         method: "get",
         data: {
           "username": username,
@@ -32,7 +32,7 @@ Page({
 
     }
     wx.request({
-      url: 'http://自己服务器ip/user/checkUserKey',
+      url: 'http://127.0.0.1:80/user/checkUserKey',
       method: "get",
       data: {
         "username": wx.getStorageSync('username'),

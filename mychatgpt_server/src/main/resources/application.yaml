@@ -8,10 +8,21 @@ spring:
       suffix: .html
   datasource:
     username: root
-    password: 自己的数据库密码
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://数据库地址:3306/mychatgpt?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false
-mybatis-plus:
-  mapper-locations: classpath:/mapper/**/*.xml
+    url: jdbc:mysql://127.0.0.1:3306/mychatgpt?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=false
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: com.ttpfx.entity
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+gpt:
+  model:
+    key: 必填
+  # proxy:
+  #   host: 127.0.0.1
+  #   port: 7890

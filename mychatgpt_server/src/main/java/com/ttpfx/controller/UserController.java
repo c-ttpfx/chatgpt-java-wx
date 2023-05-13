@@ -3,23 +3,11 @@ package com.ttpfx.controller;
 import com.ttpfx.entity.User;
 import com.ttpfx.service.UserService;
 import com.ttpfx.utils.R;
-import org.springframework.boot.autoconfigure.web.WebProperties;
-import org.springframework.boot.web.servlet.server.Session;
-import org.springframework.http.HttpCookie;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Objects;
-import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

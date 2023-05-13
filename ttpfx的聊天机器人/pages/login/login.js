@@ -48,7 +48,7 @@ Page({
       })
     } else {
       wx.request({
-        url: 'http://自己服务器ip/user/login',
+        url: 'http://127.0.0.1:80/user/login',
         method: "get",
         data: {
           "username": username,

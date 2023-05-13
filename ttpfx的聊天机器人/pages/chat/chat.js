@@ -63,14 +63,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
-
     if (wx.getStorageSync('expireTime') == null || wx.getStorageSync('expireTime') < Date.now()) {
       wx.removeStorageSync('expireTime')
       let username = wx.getStorageSync('username')
       wx.removeStorageSync('username')
       wx.request({
-        url: 'http://自己服务器ip/user/logout',
+        url: 'http://127.0.0.1:80/user/logout',
         method: "get",
         data: {
           "username": username,
@@ -88,7 +86,7 @@ Page({
 
     }
     wx.request({
-      url: 'http://自己服务器ip/user/checkUserKey',
+      url: 'http://127.0.0.1:80/user/checkUserKey',
       method: "get",
       data: {
         "username": wx.getStorageSync('username'),
@@ -118,7 +116,7 @@ Page({
     }
 
     wx.connectSocket({
-      url: 'ws://自己服务器ip/chatWebSocket/' + wx.getStorageSync('username')
+      url: 'ws://127.0.0.1:80/chatWebSocket/' + wx.getStorageSync('username')
     })
     // console.log( new Date());
     // console.log(wx.getStorageSync('username'));
