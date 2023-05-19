@@ -16,3 +16,8 @@ gpt:
     host: 127.0.0.1
     port: 7890
 ```
+
+# 错误提示
+如果出现ssl错误，检查下java版本，是否为351
+
+![image](https://github.com/c-ttpfx/chatgpt-java-wx/assets/101882388/4fbc4f34-0493-4751-b697-80f69a031370)
