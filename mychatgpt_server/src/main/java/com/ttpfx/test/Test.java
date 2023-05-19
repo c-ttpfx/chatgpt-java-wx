@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Test {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         ConfigurableApplicationContext applicationContext = SpringApplication.run(App.class, args);
         ChatModel chatModel = applicationContext.getBean("chatModel", ChatModel.class);
         ChatRequestParameter chatRequestParameter = new ChatRequestParameter();
