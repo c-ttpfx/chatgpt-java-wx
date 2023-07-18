@@ -31,6 +31,15 @@ gpt:
     port: 7890
 ```
 
+### 2023/7/18更新
+
+由于在5月份的时候相应的博客文章背删除，理由是不符合规范，chatgpt在国内也没有开放，所以决定停止开发和维护，现在在这里进行说明
+
+![image](https://github.com/c-ttpfx/chatgpt-java-wx/assets/101882388/dd86e6f9-eab8-4d7f-92cf-ba273f820928)
+
+![image](https://github.com/c-ttpfx/chatgpt-java-wx/assets/101882388/e980584f-276c-4023-a08a-66e85b6b9a12)
+
+
 ## 运行效果图展示
 **终端测试**
 
